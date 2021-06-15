@@ -16,7 +16,7 @@ export default function NewNote() {
         return content.length > 0;
     }
 
-    function handelFileChange(event) {
+    function handleFileChange(event) {
         file.current = event.target.files[0];
     }
 

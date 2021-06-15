@@ -17,7 +17,7 @@ function App() {
   const [isAuthenticated, userHasAuthenticated] = useState(false);
 
   useEffect(() => {
-    onload();
+    onLoad();
   }, []);
 
   async function onLoad() {

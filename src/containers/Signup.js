@@ -50,7 +50,7 @@ export default function Signup() {
         }
     }
 
-    async function handConfirmationSubmit(event) {
+    async function handleConfirmationSubmit(event) {
         event.preventDefault();
 
         setIsLoading(true);
