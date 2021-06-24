@@ -5,22 +5,31 @@ import NotFound from "./containers/NotFound";
 import Login from "./containers/Login";
 import NewNote from "./containers/NewNote";
 import Signup from "./containers/Signup";
-
+import Notes from "./containers/Notes";
+import Settings from "./containers/Settings";
+import AuthenticatedRoute from "./components/AuthenticatedRoute";
+import UnauthenticatedRoute from "./components/UnathenticatedRoute";
 export default function Routes () {
     return (
         <Switch>
-            <Route exact path="/">
+            <UnauthenticatedRoute exact path="/">
                 <Home />
-            </Route>
-            <Route exact path="/login">
+            </UnauthenticatedRoute>
+            <UnauthenticatedRoute exact path="/login">
                 <Login />
-            </Route>
-            <Route exact path="/signup">
+            </UnauthenticatedRoute>
+            <AuthenticatedRoute exact path="/signup">
                 <Signup />
-            </Route>
-            <Route exact path="/notes/new">
+            </AuthenticatedRoute>
+            <AuthenticatedRoute exact path="/notes/new">
                 <NewNote />
-            </Route>
+            </AuthenticatedRoute>
+            <AuthenticatedRoute exact path="/notes/:id">
+                <Notes />
+            </AuthenticatedRoute>
+            <AuthenticatedRoute exact path="/settings">
+                <Settings />
+            </AuthenticatedRoute>
             <Route>
                 <NotFound />
             </Route>

@@ -11,12 +11,12 @@ export default function LoaderButton({
 }) {
     return (
         <Button
-        disabled={disabled || isLoading}
-        className={`LoaderButton ${className}`}
-        {...props}
+         disabled={disabled || isLoading}
+         className={`LoaderButton ${className}`}
+         {...props}
         >
-            {isLoading && <BsArrowRepeat className="spinning" />}
-            {props.children}
+         {isLoading && <BsArrowRepeat className="spinning" />}
+         {props.children}
         </Button>
     );
 }
